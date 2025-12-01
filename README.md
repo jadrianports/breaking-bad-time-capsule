@@ -1,73 +1,62 @@
-# Welcome to your Lovable project
+# ⚗️ Breaking Bad Time Capsule
 
-## Project info
+> **"Stay out of my territory."** — Me, talking to Alzheimer's.
 
-**URL**: https://lovable.dev/projects/c7308bdf-0246-4bfe-854f-ad7b21158986
+## 🧠 The "Why" (Casual Edition)
 
-## How can I edit this code?
+i realize that one day I'm going to be 90 years old, in a rocking chair (straightjacket), and I'll completely forget who Walter White is. I'll look at a chemistry set and think, *"Oh, that's for baking cookies!"* instead of *"Time to cook meth."*
 
-There are several ways of editing your application.
+This little project is my insurance policy. It exists solely so that future me, who'll be ravaged by time and potentially senile can click a button, see a picture of Jesse Pinkman, and remember **YEAH SCIENCE!**.
 
-**Use Lovable**
+If you see me in a nursing home (mental hospital) in the year 2080, just hand me an iPad with this URL open. I'll know what to do.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/c7308bdf-0246-4bfe-854f-ad7b21158986) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🛠️ The "Real Why" (Technical Edition)
 
-**Use your preferred IDE**
+While I do love the show, this project was actually built to tackle a very specific, annoying web development nemesis: **The CORS Policy.**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+I wanted to build a slick UI using React, but when I tried to fetch data directly from a 3rd-party API, the browser blocked the requests due to `Access-Control-Allow-Origin` restrictions.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### The Solution: Custom Proxy Server
+To bypass this without losing my mind, I architected a custom **Express Proxy Server**. 
 
-Follow these steps:
+Instead of the React frontend calling the external API directly (which gets blocked), it calls my local Express backend. Because servers don't have the same CORS restrictions as browsers, the backend fetches the data, filters it, and passes it back to the frontend smoothly.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### The Stack
+* **Frontend:** React, Tailwind CSS, Framer Motion (flip cards), Three.js (floating crystals).
+* **Backend:** Node.js, Express (Proxy Logic).
+* **Data Source:** The Breaking Bad API by [Mridul Panda](https://www.mridul.tech).
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🚀 Getting Started
 
-# Step 3: Install the necessary dependencies.
-npm i
+### 1. Install dependencies
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```bash
+npm install
 ```
 
-**Edit a file directly in GitHub**
+### 2. Fire up the Proxy Server
+The backend handles the data fetching and filtering logic.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+npm run proxy-server
+# Server runs on localhost:5000
+```
 
-**Use GitHub Codespaces**
+### 3. Launch the UI
+The frontend connects to the proxy to render the data.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```bash
+npm run dev
+# React app runs on localhost:8080
+```
+---
 
-## What technologies are used for this project?
+## 🙌 Acknowledgements
 
-This project is built with:
+Huge shoutout to **Mridul Panda** for maintaining a Breaking Bad API even after [Timbiles's](https://github.com/timbiles/Breaking-Bad--API) was shut down.
+* **Website:** [www.mridul.tech](https://www.mridul.tech)
+* **GitHub:** [Mridul2820](https://github.com/Mridul2820)
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/c7308bdf-0246-4bfe-854f-ad7b21158986) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+---
