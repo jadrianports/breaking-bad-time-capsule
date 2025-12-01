@@ -2,7 +2,7 @@
 
 > **"Stay out of my territory."** — Me, talking to Alzheimer's.
 
-## 🧠 The "Why" (Casual Edition)
+## 🧠 The "Why"
 
 i realize that one day I'm going to be 90 years old, in a rocking chair (straightjacket), and I'll completely forget who Walter White is. I'll look at a chemistry set and think, *"Oh, that's for baking cookies!"* instead of *"Time to cook meth."*
 
@@ -12,7 +12,7 @@ If you see me in a nursing home (mental hospital) in the year 2080, just hand me
 
 ---
 
-## 🛠️ The "Real Why" (Technical Edition)
+## 🛠️ The "Real Why"
 
 While I do love the show, this project was actually built to tackle a very specific, annoying web development nemesis: **The CORS Policy.**
 
