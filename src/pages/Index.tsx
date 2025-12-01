@@ -8,7 +8,7 @@ import CharacterGrid from "@/components/characters/CharacterGrid";
 import EpisodeGrid from "@/components/episodes/EpisodeGrid";
 import QuoteGrid from "@/components/quotes/QuoteGrid";
 
-const API_BASE = "http://localhost:5000/api";
+const API_BASE = "/api";
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState("characters");
